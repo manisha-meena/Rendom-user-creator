@@ -1,0 +1,123 @@
+/* General reset and font setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+/* Wrapper styling */
+.wrapper {
+  position: relative;
+  width: 350px;
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #ff8a00, #da1b60);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Image area styling */
+.img-area {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.img-area:hover {
+  transform: scale(1.1);
+}
+
+.inner-area {
+  width: 100%;
+  height: 100%;
+}
+
+.inner-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Name styling */
+#name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin: 15px 0;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Info section styling */
+.info {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.info p {
+  margin-bottom: 10px;
+}
+
+/* Horizon line styling */
+.horizon {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 15px 0;
+}
+
+/* Button styling */
+#btn {
+  width: 160px;
+  padding: 10px;
+  border: none;
+  background-color: #ff8a00;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #da1b60;
+  transform: scale(1.05);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
